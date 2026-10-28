@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usha's Kitchen</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #ff914d;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 12px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 100px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("https://ushaskitchen.com/wp-content/uploads/2024/05/iStock-849938680-1024x683.jpg");
+            background-size: cover;
+            color: white;
+        }
+
+        section {
+            padding: 50px;
+        }
+
+        /* MENU CARDS */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: 250px;
+            background: #f4f4f4;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* OVERLAY */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .card:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay a {
+            background: linear-gradient(45deg, #ff914d, #ff5e62);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        /* BADGE */
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: red;
+            color: white;
+            padding: 5px 8px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        .card h3 {
+            margin: 10px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        /* CONTACT */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Usha's Kitchen 🍲</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#special">Special</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <h1>Welcome to Usha's Kitchen</h1>
+    <p>Fresh • Homemade • Delicious ❤️</p>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+    <h1>Our Menu 🍛</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="badge">Best Seller ⭐</div>
+            <img src="https://tse3.mm.bing.net/th/id/OIP.09w0S6udb6sRvC1qeh3gdQHaE0">
+            <div class="overlay">
+                <a href="https://www.zomato.com" target="_blank">Order Now</a>
+            </div>
+            <h3>Veg Biryani</h3>
+            <p class="price">₹120</p>
+        </div>
+
+        <div class="card">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.ckDtFMQqii2m-MNW7DW4-wHaE7">
+            <div class="overlay">
+                <a href="https://www.zomato.com" target="_blank">Order Now</a>
+            </div>
+            <h3>Dosa</h3>
+            <p class="price">₹50</p>
+        </div>
+
+        <div class="card">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.QOIq9zrUP_IaFnbrIduk-gHaEK">
+            <div class="overlay">
+                <a href="https://www.zomato.com" target="_blank">Order Now</a>
+            </div>
+            <h3>Paneer Curry</h3>
+            <p class="price">₹150</p>
+        </div>
+
+        <div class="card">
+    <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/tomato-bath.jpg">
+    <div class="overlay">
+        <a href="https://www.zomato.com" target="_blank">Order Now</a>
+    </div>
+    <h3>Tomato bath</h3>
+    <p class="price">₹70</p>
+</div>
+
+<div class="card">
+    <div class="badge">Hot 🔥</div>
+    <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/09/Gobi-Manchurian.jpg">
+    <div class="overlay">
+        <a href="https://www.zomato.com" target="_blank">Order Now</a>
+    </div>
+    <h3>Gobi Manchurian</h3>
+    <p class="price">₹120</p>
+</div>
+
+<div class="card">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.cJzQ-h7MG0O2-osrDcUuLgHaEn?rs=1&pid=ImgDetMain&o=7&rm=3">
+    <div class="overlay">
+        <a href="https://www.zomato.com" target="_blank">Order Now</a>
+    </div>
+    <h3>Curd Rice</h3>
+    <p class="price">₹60</p>
+</div>
+
+<div class="card">
+    <div class="badge">Chef Special 👩‍🍳</div>
+    <img src="https://tse1.mm.bing.net/th/id/OIP.Hw9TUiGlTvwj0Ae8vPe55AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">
+    <div class="overlay">
+        <a href="https://www.zomato.com" target="_blank">Order Now</a>
+    </div>
+    <h3>Paneer Butter Masala</h3>
+    <p class="price">₹160</p>
+</div>
+
+<div class="card">
+    <img src="https://img.freepik.com/premium-photo/maharashtrian-food-thali-platter-mumbai-style-meal-from-indian_466689-5452.jpg?w=2000">
+    <div class="overlay">
+        <a href="https://www.zomato.com" target="_blank">Order Now</a>
+    </div>
+    <h3>Veg Meals</h3>
+    <p class="price">₹130</p>
+</div>
+
+<div class="card">
+    <img src="https://media.istockphoto.com/id/494943872/photo/puri-tasty-indian-bread-poori-bhaji-isolated.jpg?s=612x612&w=0&k=20&c=uBfS1tJKDJnME-Cu4epiiuLlJXrgxUyVO_YPxhny7Ck=">
+    <div class="overlay">
+        <a href="https://www.zomato.com" target="_blank">Order Now</a>
+    </div>
+    <h3>Poori Bhaji</h3>
+    <p class="price">₹80</p>
+</div>
+
+<div class="card">
+    <div class="badge">Trending 🔥</div>
+    <img src="https://www.subbuskitchen.com/wp-content/uploads/2014/01/Veg-Noodles.jpg">
+    <div class="overlay">
+        <a href="https://www.zomato.com" target="_blank">Order Now</a>
+    </div>
+    <h3>Veg Fried Noodles</h3>
+    <p class="price">₹110</p>
+</div>
+
+<div class="card">
+    <img src="https://www.jessicagavin.com/wp-content/uploads/2020/04/tomato-soup-9-1200.jpg">
+    <div class="overlay">
+        <a href="https://www.zomato.com" target="_blank">Order Now</a>
+    </div>
+    <h3>Tomato Soup</h3>
+    <p class="price">₹60</p>
+</div>
+
+    </div>
+</section>
+
+<!-- SPECIAL -->
+<section id="special">
+    <h1>Today's Special ⭐</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="badge">Popular 🔥</div>
+            <img src="https://tse4.mm.bing.net/th/id/OIP.Bm9vHRAbdbFl368jiGCiOAHaEM">
+            <div class="overlay">
+                <a href="https://www.zomato.com" target="_blank">Order Now</a>
+            </div>
+            <h3>South Indian Thali</h3>
+            <p class="price">₹180</p>
+        </div>
+
+        <div class="card">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.wWjWbxH_0twm-5APzzhxXgHaEJ">
+            <div class="overlay">
+                <a href="https://www.zomato.com" target="_blank">Order Now</a>
+            </div>
+            <h3>Sweet Dessert</h3>
+            <p class="price">₹90</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h1>Contact Us 📞</h1>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Message"></textarea>
+        <button>Send Message</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Usha's Kitchen | Made by Anju 💖</p>
+</footer>
+
+</body>
+</html>
